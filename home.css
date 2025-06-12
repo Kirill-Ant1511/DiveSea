@@ -1,0 +1,901 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F9F9F9;
+    flex-direction: column;
+    justify-items: center;
+}
+
+main {
+    width: 100vw;
+}
+
+main .hero {
+    display: grid;
+    grid-template-areas: 
+    "hero_text hero_header"
+    "hero_future hero_header";
+    width: 100vw;
+    height: auto;
+}
+
+main .hero_main_text {
+    justify-self: end;
+    width: 500px;
+}
+
+main .hero_main_text div.line {
+    width: 30%;
+    border: 1px solid #E6E8EC;
+    margin: 0;
+}
+
+main .hero_main_text h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 4em;
+    margin: 16px 0;
+}
+
+main .hero_main_text p {
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    flex-wrap: wrap;
+}
+
+main .hero_main_text p span { 
+    font-weight: 600;
+}
+
+main .hero_main_text .hero_text_button {
+    margin: 45px 0;
+}
+
+main .hero_main_text .hero_text_button button {
+    width: 160px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+
+main .hero_main_text .hero_text_button .exp_more {
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    padding: 12px;
+}
+
+main .hero_main_text .hero_text_button .create_nft {
+    background-color: #fff;
+    color: #000;
+    width: 138px;
+}
+
+main .hero_text .hero_features {
+    display: flex;
+    justify-content: end;
+    margin: 0 50px 0 0;
+}
+
+main .hero_text .hero_features div {
+    margin: 45px 30px;
+    font-family: "Public Sans", sans-serif;
+}
+
+main .hero_text .hero_features div p {
+    font-family: "Inter", sans-serif;
+    font-size: .7em;
+    opacity: 60%;
+}
+
+main .hero_header {
+    display: inline-grid;
+    grid-template-areas: 
+    "hero_header_img_1 arrow_img"
+    "navigator_button hero_header_img_2";
+    overflow: hidden;
+    gap: 40px;
+    justify-items: end;
+}
+
+main .hero_header_img_1 {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
+
+main .hero_header_img_1 img {
+    width: 390px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+main .hero .arrow_img {
+    width: 300px;
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: start;
+    align-items: end;
+}
+main .hero .arrow_img img.arrow {
+    width: 128px;
+    height: 125px;
+    rotate: 10deg;
+}
+
+main .hero .arrow_img img.dots {
+    margin-left: 50px;
+}
+
+main .hero_header_img_2 {
+    height: auto;
+    object-fit: cover;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+}
+
+main .hero_header_img_2 img {
+    object-fit: cover;
+    width: 320px;
+    height: 320px;
+    border-radius: 25px;
+}
+
+div.navigator_button {
+    display: inline-flex;
+    justify-content: center;
+    background-color: #FCFCFC;
+    border-radius: 20px;
+    width: 40%;
+    box-shadow: 0 43px 34px rgba(0, 0, 0, 0.24);
+    align-items: center;
+    padding: 10px;
+}
+
+div.navigator_button div {
+    width: 0px;
+    height: 60%;
+    border: 1px solid #E6E8Ec;
+    margin: 0 20px;
+}
+
+div.navigator_button button {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background-color: #FCFCFC;
+}
+
+div.navigator_button button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.weekly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    background-color: #F1F1F1;
+    padding: 20px 0;
+    overflow-x: hidden;
+}
+
+.weekly .weekly_header {
+    margin: 50px;
+    font-size: 1.5em;
+    opacity: 30%;
+}
+
+.weekly .cards_slider {
+    width: 125%;
+}
+
+.weekly .cards_slider ul {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;   
+}
+
+.weekly div.nav_block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+}
+
+.weekly div.nav_block div.navigator_button {
+    width: 200px;
+}
+
+
+.card {
+    width: 300px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 23px;
+    box-shadow: 38px 11px 58px #C7C7C7;
+}
+
+.card div.img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+    justify-self: center;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card div.img p {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 15px;
+    padding: 7px;
+    justify-self: end;
+    text-align: center;
+}
+
+.card h1 {
+    margin: 15px 0;
+}
+
+.card div.prices {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card div.prices .prices_info h4 {
+    opacity: 40%;
+    font-weight: 400;
+}
+
+.card div.prices .prices_info p img {
+    margin-right: 10px;
+}
+
+.card div.prices button {
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.recent_viewed {
+    /* Позиционирование */
+    position: absolute;
+    top: 1550px;
+    right: 50px;
+    
+    /* Блочная модель */
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px 30px 30px;
+    /* Типографика */
+    
+    /* Оформление */
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, .1);
+
+    /* Анимация */
+
+    /* Разное */
+    
+}
+
+.recent_viewed ul {
+    list-style: none;
+}
+
+.recent_viewed .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.recent_viewed .header button {
+    background-color: #fff;
+    border: 0;
+    font-size: 20px;
+}
+
+
+.recent_viewed .users_card .card_user {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.recent_viewed .users_card .card_user .profile_info {
+    display: flex;
+}
+
+.profile_img {
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    border-radius: 960px;
+}
+
+.profile_img p {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 960px;
+    width: 25px;
+    height: 25px;
+    justify-self: end;
+}
+
+
+.user_name {
+    margin: 0 30px;
+}
+
+.user_name p {
+    opacity: 40%;
+}
+
+.recent_viewed .users_card .card_user .user_status div {
+    display: flex;
+    margin: 5px 0;
+}
+
+.recent_viewed .users_card .card_user .user_status div img {
+    margin-right: 7px;
+}
+
+div.top_collection {
+    margin-top: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+}
+
+div.top_collection .top_collection_header h1 {
+    font-size: 3em;
+}
+
+div.top_collection table {
+    width: 90%;
+}
+
+div.top_collection table tr {
+    height: 70px;
+}
+
+div.top_collection table .main_rows_table {
+    color: rgba(0, 0, 0, .5);
+}
+
+div.top_collection table .user_card .user_info {
+    display: flex;
+}
+
+div.top_collection table .user_card .user_info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 960px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+div.top_collection table .user_card .user_info p {
+    opacity: 50%;
+}
+
+div.top_collection table .user_card .info div{
+    display: flex;
+}
+table {
+    border-collapse: collapse;
+}
+
+tr:not(:first-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+td {
+    align-items: center;
+    height: 80px;
+}
+
+div.top_collection table .user_card img {
+    margin-right: 10px;
+}
+
+.exp_all {
+    align-self: flex-end;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: 75px 0;
+
+}
+
+.exp_all button {
+    background-color: #F9F9F9;
+    border: 0;
+    display: flex;
+    align-items: center;
+    opacity: 40%;
+}
+
+.exp_all button img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+div.exp_market {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+}
+
+div.exp_market .market_header h1 {
+    font-size: 3em;
+}
+
+div.exp_market .market_header .exp_market_buttons {
+    display: flex;
+    justify-content: center;
+}
+
+div.exp_market .market_header .exp_market_buttons button {
+    padding: 7px 15px;
+    display: flex;
+    align-items: center;
+    margin: 35px 20px;
+    font-size: 1em;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+div.exp_market .market_header .exp_market_buttons button img {
+    margin-right: 10px;
+}
+
+div.exp_market .products_cards ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    list-style: none;
+}
+
+div.exp_market .products_cards ul li.card {
+    width: 250px;
+}
+
+div.exmp_info .recent_viewed {
+    position: inherit;
+}
+
+div.line {
+    height: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    width: 80%;
+}
+
+div.inner_collector {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+
+    font-family: "Poppins", sans-serif;
+}
+
+div.inner_collector .collector_info {
+    width: 30%;
+    justify-items: start;
+}
+
+div.inner_collector .collector_info h1 {
+    font-size: 2.9em;
+}
+
+div.inner_collector .collector_info h1 span {
+    color: #C5C5C5;
+}
+
+div.inner_collector .collector_info ul.check_list_info li {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
+
+div.inner_collector .collector_info button {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 12px;
+    border: 0;
+    margin: 70px 20px;
+}
+
+div.inner_collector .collector_info button img {
+    width: 12px;
+    margin-left: 10px;
+}
+
+div.inner_collector .exmp_info .best_sellers {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+div.inner_collector .exmp_info .best_sellers h3 {
+    font-size: 2em;
+    width: 100%;
+}
+
+div.inner_collector .exmp_info .best_sellers ul li {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: 50px;
+    list-style: none;
+    margin: 20px 0;
+}
+
+div.inner_collector .exmp_info .best_sellers ul li .profile_info {
+    display: flex;
+}
+
+div.inner_collector .exmp_info .best_sellers ul li .profile_info .user_name h3 {
+    font-size: 1.1em;
+}
+
+div.inner_collector .exmp_info .best_sellers ul li .profile_info .user_name p {
+    font: .9em;
+}
+
+
+div.inner_collector .exmp_info .best_sellers ul li button {
+    width: 100px;
+    height: 40px;
+    align-self: center;
+    background-color: #fff;
+    border: 2px solid #c5c5c5;
+    border-radius: 8px;
+
+}
+div.inner_collector .exmp_info .best_sellers ul li button.unfollow {
+    border: 0;
+    background-color: #E6E8EC;
+}
+
+div.exmp_info .new_bid {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    width: 350px;
+}
+
+div.exmp_info .new_bid .bid_block {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+div.exmp_info .new_bid .bid_block .bid_info {
+    display: flex;
+    align-items: center;
+}
+
+div.exmp_info .new_bid .bid_block .bid_info .bid_info_text {
+    margin-left: 30px;
+}
+
+div.exmp_info .new_bid .bid_block .bid_info .bid_info_text h4 {
+    font-weight: 400;
+}
+
+div.exmp_info .new_bid .bid_block .bid_info .bid_info_text h4 span {
+    color: #C5C5C5;
+}
+
+div.exmp_info .new_bid .bid_block .bid_info .bid_info_text p {
+    font-size: .8em;
+}
+
+div.exmp_info .new_bid .bid_block .bid_info .bid_info_text p.data {
+    color: #C5C5C5;
+}
+
+div.exmp_info .new_bid .bid_block img.bid_picture {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+div.exmp_info .best_sellers {
+    position:absolute;
+    right: 300px;
+    top: 3900px;
+    z-index: -10;
+}
+
+div.exmp_info .recent_viewed {
+    position: absolute;
+    top: 4260px;
+    right: 450px;
+}
+
+div.exmp_info img.dots {
+    width: 400px;
+    position: absolute;
+    right: 0px;
+    top: 4250px;
+    z-index: -20;
+}
+
+div.join_com {
+    margin: 300px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    font-family: "Poppins", sans-serif;
+}
+
+div.join_com .circle_1 {
+    width: 900px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #c5c5c5;
+    border-radius: 920px;
+    align-items: center;
+    position: relative;
+}
+
+
+
+div.join_com .circle_1 .nft_planet {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 920px;
+    position: absolute;
+    transition: .3s ease;
+}
+
+div.join_com .circle_1 .nft_planet:hover {
+    width: 60px;
+    height: 60px;
+}
+
+div.join_com .planet_1 {
+    left: 110px;
+    top: 100px;
+}
+
+div.join_com .planet_2 {
+    right: 70px;
+    top: 145px;
+}
+
+div.join_com .planet_3 {
+    bottom: 100px;
+    left: 115px;
+}
+
+div.join_com .planet_4 {
+    bottom: 0px;
+    right: 270px;
+}
+
+div.join_com .planet_5 {
+    bottom: 200px;
+    right: 35px;
+}
+
+div.join_com .planet_6 {
+    top: 0;
+    right: 195px;
+}
+
+div.join_com .planet_7 {
+    top: 600px;
+    right: 110px;
+}
+
+div.join_com .planet_8 {
+    top: 400px;
+    right: -20px;
+}
+
+div.join_com .planet_9 {
+    top: 200px;
+    left: 0px;
+}
+
+div.join_com .circle_2 {
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c5c5c5;
+    border-radius: 920px;
+    position: relative;
+}
+
+div.join_com .circle_2 .join_com_info {
+    width: 65%;
+    justify-items: center;
+    text-align: center;
+}
+
+div.join_com .circle_2 .join_com_info h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5em;
+}
+
+div.join_com .circle_2 .join_com_info h1 span {
+    color: #C5C5C5;
+}
+
+div.join_com .circle_2 .join_com_info p {
+    font-size: .85em;
+    margin: 15px 0;
+}
+
+div.join_com .circle_2 .join_com_info button {
+    padding: 15px;
+    color: #fff;
+    background-color: #000;
+    border: 0;
+    border-radius: 12px;
+}
+
+.freq_ask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 220px;
+
+    font-family: "Poppins", sans-serif;
+}
+
+.freq_ask h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.freq_ask h1 span {
+    color: #C5C5C5;
+}
+
+.freq_ask .questions_asks {
+    width: 80%;
+    margin-top: 50px;
+}
+
+.freq_ask .questions_asks .ask {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    width: 100%;
+    border-bottom: 2px solid #c5c5c5;
+    margin: 10px 0;
+    
+}
+.freq_ask .questions_asks .ask div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 7px 0;
+    align-items: center;
+}
+
+.freq_ask .questions_asks .ask div button {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 920px;
+    border: 0;
+}
+
+.freq_ask .questions_asks .ask p {
+    display: none;
+    
+}
+
+.freq_ask .questions_asks .ask p.visible {
+    display: block;
+}
+
+.exp_or_sell {
+    width: 100%;
+    justify-items: center;
+    margin: 100px 0;
+}
+
+.exp_or_sell_block {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 30px;
+    border-radius: 30px;
+
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.exp_or_sell_block .info .info_text {
+    margin: 20px 0 60px 0;
+}
+
+.exp_or_sell_block .info .info_text h1 {
+    font-size: 3.3em;
+}
+
+.exp_or_sell_block .info .info_text p {
+    opacity: 60%;
+}
+
+.exp_or_sell_block .info .info_btns button {
+    padding: 18px;
+    border: 0;
+    border-radius: 12px;
+}
+
+.exp_or_sell_block .info .info_btns button.exp_more {
+    background-color: #fff;
+}
+
+.exp_or_sell_block .info .info_btns button.sell_art {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-left: 40px;
+}
+
+.exp_or_sell_block img {
+    width: 400px;
+    height: 260px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 30px #fff;
+}
+

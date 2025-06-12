@@ -1,0 +1,51 @@
+.main_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    padding: 20px 0;
+    width: 1220px;
+    margin-bottom: 100px;
+}
+
+.main_header nav {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+}
+
+.main_header nav a {
+    text-decoration: none;
+    color: #606060;
+    margin: auto 50px;
+}
+
+.main_header .search_input {
+    display: inline-flex;
+    background-color: #EDEDED;
+    border-radius: 15px;
+    padding: 10px;
+    width: 270px;
+}
+
+.main_header .search_input button {
+    border: 0;
+    margin: 0 20px 0px 10px;
+}
+
+.main_header .search_input input {
+    border: 0;
+    width: 200px;
+    background-color: #EDEDED;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_header .connect_button {
+    padding: 16px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    border-radius: 16px;
+    margin: 0 20px;
+    text-transform: uppercase;
+}
