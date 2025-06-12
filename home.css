@@ -198,6 +198,7 @@ div.navigator_button button img {
 
 .weekly .cards_slider {
     width: 125%;
+    transition: all .3s ease;
 }
 
 .weekly .cards_slider ul {
@@ -205,7 +206,8 @@ div.navigator_button button img {
     display: inline-flex;
     justify-content: center;
     list-style: none;
-    gap: 40px;   
+    gap: 40px; 
+    transition:all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);  
 }
 
 .weekly div.nav_block {
@@ -838,7 +840,6 @@ div.join_com .circle_2 .join_com_info button {
 
 .freq_ask .questions_asks .ask p {
     display: none;
-    
 }
 
 .freq_ask .questions_asks .ask p.visible {

@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="home.js" defer></script>
     <title>DiveSea</title>
 </head>
 <body>
@@ -81,7 +80,7 @@
             </div>
 
             <div class="cards_slider">
-                <ul>
+                <ul style="position: relative;">
                     <li class="card">
                         <div class="img" style="background-image: url('Resource/header_nft_2.jpg');">
                             <p>07h 09m 12s</p>
@@ -95,6 +94,21 @@
                             <button>Place Bid</button>
                         </div>
                     </li>
+
+                    <li class="card">
+                        <div class="img" style="background-image: url('Resource/header_nft_2.jpg');">
+                            <p>07h 09m 12s</p>
+                        </div>
+                        <h1>Sun-Glass</h1>
+                        <div class="prices">
+                            <div class="prices_info">
+                                <h4>Current bid</h4>
+                                <p><img src="Resource/etherium.png"> 1.75</p>
+                            </div>
+                            <button>Place Bid</button>
+                        </div>
+                    </li>
+                    
 
                     <li class="card">
                         <div class="img" style="background-image: url('Resource/header_nft_1.jpg');">
@@ -153,9 +167,9 @@
                 </ul>
                 <div class="nav_block">
                     <div class="navigator_button">
-                        <button class="left_button"><img src="Resource/left-arrow.svg"></button>
+                        <button class="left_button prev_item"><img src="Resource/left-arrow.svg"></button>
                         <div></div>
-                        <button class="right_button"><img src="Resource/right-arrow.svg"></button>
+                        <button class="right_button next_item"><img src="Resource/right-arrow.svg"></button>
                     </div>
                 </div>
             </div>
@@ -814,4 +828,5 @@
         </div>
     </footer>
 </body>
+<script src="home.js" defer></script>
 </html>
