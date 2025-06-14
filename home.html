@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
-
+    <link rel="stylesheet" href="card.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -15,19 +16,21 @@
 </head>
 <body>
     <header class="main_header">
-        <img src="Resource/Logo.png" alt="DiveSeaLogo">
-        <nav>
-            <a href="">Discovery</a>
-            <a href="">Creators</a>
-            <a href="">Sell</a>
-            <a href="">Stats</a>
-        </nav>
-
-        <div class="search_input">
-            <button><img src="Resource/Searching.png"></button>
-            <input type="search" placeholder="Search Art Work / Creator">
+        <div class="header_block">
+            <a href="home.html"><img src="Resource/Logo.png" alt="DiveSeaLogo"></a>
+            <nav>
+                <a href="discover.html">Discovery</a>
+                <a href="">Creators</a>
+                <a href="">Sell</a>
+                <a href="">Stats</a>
+            </nav>
+    
+            <div class="search_input">
+                <button><img src="Resource/Searching.png"></button>
+                <input type="search" placeholder="Search Art Work / Creator">
+            </div>
+            <button class="connect_button">Connect Wallet</button>
         </div>
-        <button class="connect_button">Connect Wallet</button>
     </header>
 
     <main>
@@ -80,75 +83,8 @@
             </div>
 
             <div class="cards_slider">
-                <ul style="position: relative;">
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/header_nft_2.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>Sun-Glass</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.75</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/header_nft_1.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>Sun-Glass</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.75</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/nft_5.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>Sun-Glass</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.75</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/nft_4.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>NuEvey</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.25</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/nft3.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>NuEvey</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.25</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
+                <ul style="position: relative; left: 0;">
+                    
                 </ul>
                 <div class="nav_block">
                     <div class="navigator_button">
@@ -344,116 +280,7 @@
 
             <div class="products_cards">
                 <ul>
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/header_nft_2.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>Sun-Glass</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.75</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/header_nft_1.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>Sun-Glass</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.75</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/nft_5.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>Sun-Glass</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.25</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/nft_4.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>NuEvey</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.25</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/nft_4.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>NuEvey</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.25</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/nft_5.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>Sun-Glass</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.25</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/header_nft_1.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>Sun-Glass</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.75</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
-
-                    <li class="card">
-                        <div class="img" style="background-image: url('Resource/header_nft_2.jpg');">
-                            <p>07h 09m 12s</p>
-                        </div>
-                        <h1>Sun-Glass</h1>
-                        <div class="prices">
-                            <div class="prices_info">
-                                <h4>Current bid</h4>
-                                <p><img src="Resource/etherium.png"> 1.75</p>
-                            </div>
-                            <button>Place Bid</button>
-                        </div>
-                    </li>
+                    
                 </ul>
             </div>
             <div class="exp_all">

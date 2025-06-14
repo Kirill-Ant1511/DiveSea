@@ -5,8 +5,6 @@
 }
 body {
     background-color: #F9F9F9;
-    flex-direction: column;
-    justify-items: center;
 }
 
 main {
@@ -220,62 +218,6 @@ div.navigator_button button img {
 .weekly div.nav_block div.navigator_button {
     width: 200px;
 }
-
-
-.card {
-    width: 300px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 23px;
-    box-shadow: 38px 11px 58px #C7C7C7;
-}
-
-.card div.img {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 250px;
-    justify-self: center;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.card div.img p {
-    color: #fff;
-    background-color: rgba(0, 0, 0, .4);
-    border-radius: 15px;
-    padding: 7px;
-    justify-self: end;
-    text-align: center;
-}
-
-.card h1 {
-    margin: 15px 0;
-}
-
-.card div.prices {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card div.prices .prices_info h4 {
-    opacity: 40%;
-    font-weight: 400;
-}
-
-.card div.prices .prices_info p img {
-    margin-right: 10px;
-}
-
-.card div.prices button {
-    padding: 15px;
-    background-color: #000;
-    color: #fff;
-    border: 0;
-    border-radius: 12px;
-    text-transform: uppercase;
-}
-
 .recent_viewed {
     /* Позиционирование */
     position: absolute;
@@ -899,4 +841,3 @@ div.join_com .circle_2 .join_com_info button {
     border-radius: 15px;
     box-shadow: 1px 1px 30px #fff;
 }
-

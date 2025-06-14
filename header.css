@@ -1,4 +1,9 @@
 .main_header {
+    width: 100%;
+    justify-items: center;
+}
+
+.main_header .header_block {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -7,6 +12,7 @@
     width: 1220px;
     margin-bottom: 100px;
 }
+
 
 .main_header nav {
     display: flex;
