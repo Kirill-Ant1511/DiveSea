@@ -55,91 +55,99 @@ function SliderInit() {
 
 // MARK: WeeklyTop
 
-function getTopWeek() {
-  return new Promise((resolve, reject) => {
-   fetch("https://6834a37ecd78db2058bee2cc.mockapi.io/weekly_top")
+function makeRequest(url) {
+  return new Promise((fullfill, reject) => {
+   fetch(url)
   .then(responce => {
     if (!responce.ok) {
       throw new Error("Error from  get data: " + responce.status)
     }
-    resolve("success");
     return responce.json();
   })
   .then((data) => {
-    const weeklyTop = document.querySelector(".cards_slider ul")
-    for (let i = 0; i < data.length; i++) {
-      const htmlCard = `
-        <li class="card">
-            <div class="img" style="background-image: url('${data[i].avatar}');">
-                <p>07h 09m 12s</p>
-            </div>
-            <h1>${data[i].name}</h1>
-            <div class="prices">
-                <div class="prices_info">
-                    <h4>Current bid</h4>
-                    <p><img src="Resource/etherium.png"> ${data[i].price}</p>
-                </div>
-                <button>Place Bid</button>
-            </div>
-        </li>
-      `
-
-      weeklyTop.insertAdjacentHTML('beforeend', htmlCard)
-    }
-
-    SliderInit();
+    fullfill(data);
   })
   .catch(error => {
-    console.log("Error: " + error)
+    reject(error);
   })
   })
 }
 
+function weeklyTopCards(data) {
+  const weeklyTop = document.querySelector(".cards_slider ul")
+  for (let i = 0; i < data.length; i++) {
+    const htmlCard = `
+      <li class="card" id="${i}" source="http://127.0.0.1:5500/collection.html?id=${i}">
+          <div class="img" style="background-image: url('${data[i].avatar}');">
+              <p>07h 09m 12s</p>
+          </div>
+          <h1>${data[i].name}</h1>
+          <div class="prices">
+              <div class="prices_info">
+                  <h4>Current bid</h4>
+                  <p><img src="Resource/etherium.png"> ${data[i].price}</p>
+              </div>
+              <button class="place_bid">Place Bid</button>
+          </div>
+      </li>
+    `
 
-getTopWeek();
+    weeklyTop.insertAdjacentHTML('beforeend', htmlCard)
+  }
+}
+
+makeRequest("https://6834a37ecd78db2058bee2cc.mockapi.io/weekly_top")
+  .then((data) => {
+    weeklyTopCards(data)
+    SliderInit();
+    initCards();
+  })
+  .catch((error) => {
+    console.log("ERROR: " + error);
+  })
+
+
+// MARK: INIT CARD
+function initCards() {
+  const cards = document.querySelectorAll(".card");
+  for(let i = 0; i < cards.length; i++) {
+    const cardBtn = cards[i].querySelector(".place_bid");
+    cardBtn.addEventListener('click', () => {
+      window.location.href = cards[i].getAttribute("source")
+    });
+  }
+}
 
 
 // MARK: Collections
 
-const marketplaceCards = document.querySelector(".exp_market .products_cards ul")
-
-function getMarketCollection() {
-  return new Promise((resolve, reject) => {
-    fetch("https://6834a37ecd78db2058bee2cc.mockapi.io/collection")
-    .then(responce => {
-      if(!responce.ok) {
-        throw new Error("Error: " + responce.status)
-      }
-      resolve("success");
-      return responce.json()
-    })
-    .then((data) => {
-      for (let i = 0; i < 8; i++) {
-        const card = `
-          <li class="card">
-              <div class="img" style="background-image: url('${data[i].nftImage}');">
-                  <p>07h 09m 12s</p>
+function marketplaceCards(data) {
+  const marketplaceCards = document.querySelector(".exp_market .products_cards ul")
+  for (let i = 0; i < 8; i++) {
+    const card = `
+      <li class="card" id="${i}" source="http://127.0.0.1:5500/collection.html?id=${i}">
+          <div class="img" style="background-image: url('${data[i].nftImage}');">
+              <p>07h 09m 12s</p>
+          </div>
+          <h1>${data[i].title}</h1>
+          <div class="prices">
+              <div class="prices_info">
+                  <h4>Current bid</h4>
+                  <p><img src="Resource/etherium.png"> ${data[i].price}</p>
               </div>
-              <h1>${data[i].title}</h1>
-              <div class="prices">
-                  <div class="prices_info">
-                      <h4>Current bid</h4>
-                      <p><img src="Resource/etherium.png"> ${data[i].price}</p>
-                  </div>
-                  <button>Place Bid</button>
-              </div>
-          </li>
-        `
-        console.log(data[i]);
-        
-        marketplaceCards.insertAdjacentHTML('beforeend', card)
-      }
-    })
-    .catch(error => {
-      console.log("ERROR: " + error)
-    })
-  })
-  
+              <button class="place_bid">Place Bid</button>
+          </div>
+      </li>
+    `
+    marketplaceCards.insertAdjacentHTML('beforeend', card)
+  }
 }
 
-getMarketCollection();
+makeRequest("https://6834a37ecd78db2058bee2cc.mockapi.io/collection")
+  .then((data) => {
+    marketplaceCards(data);
+    initCards();
+  })
+  .catch((error) => {
+    console.log("ERROR: " + error);
+  })

@@ -70,11 +70,22 @@ async function makeRequest(url) {
   })
 }
 
+// MARK: INIT CARD
+function initCards() {
+  const cards = document.querySelectorAll(".card");
+  for(let i = 0; i < cards.length; i++) {
+    const cardBtn = cards[i].querySelector(".place_bid");
+    cardBtn.addEventListener('click', () => {
+      window.location.href = cards[i].getAttribute("source")
+    });
+  }
+}
+
 function addCollectionCards(data) {
   const collectionList = document.querySelector(".collection_list");
   for (let i = 0; i < data.length; i++) {
     const card = `
-      <li class="card">
+      <li class="card" id="${i}" source="http://127.0.0.1:5500/collection.html?id=${i}">
           <div class="img" style="background-image: url('${data[i].nftImage}');">
               <p>07h 09m 12s</p>
           </div>
@@ -84,7 +95,7 @@ function addCollectionCards(data) {
                   <h4>Current bid</h4>
                   <p><img src="Resource/etherium.png"> ${data[i].price}</p>
               </div>
-              <button>Place Bid</button>
+              <button class="place_bid">Place Bid</button>
           </div>
       </li>
     `;
@@ -98,6 +109,7 @@ async function drawCards() {
   try {
     const data = await makeRequest("https://6834a37ecd78db2058bee2cc.mockapi.io/collection");
     addCollectionCards(data);
+    initCards();
   } catch(error) {
     console.log(error);
   }

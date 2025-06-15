@@ -761,7 +761,7 @@ div.join_com .circle_2 .join_com_info button {
     width: 100%;
     border-bottom: 2px solid #c5c5c5;
     margin: 10px 0;
-    
+    transition: all .3s linear;
 }
 .freq_ask .questions_asks .ask div {
     display: flex;
@@ -769,6 +769,7 @@ div.join_com .circle_2 .join_com_info button {
     justify-content: space-between;
     margin: 7px 0;
     align-items: center;
+    
 }
 
 .freq_ask .questions_asks .ask div button {
@@ -781,11 +782,12 @@ div.join_com .circle_2 .join_com_info button {
 }
 
 .freq_ask .questions_asks .ask p {
-    display: none;
+    transition: all .5s linear;
+    transform: translateX(-200%);
 }
 
 .freq_ask .questions_asks .ask p.visible {
-    display: block;
+    transform: translateY(0%);
 }
 
 .exp_or_sell {
